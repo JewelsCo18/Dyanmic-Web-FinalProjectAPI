@@ -8,6 +8,8 @@ router.get("/", (req, res) => {
     const imageAlt = queryParams.imageAlt; 
     const imageSrc = queryParams.imageSrc; 
     const imageCaption = queryParams.imageCaption; 
+    const imageTag = queryParams.imageTag; 
+    const imageTitle = queryParams.imageTitle; 
     const userID = queryParams.uid; 
     const displayName = queryParams.name; 
 
@@ -15,6 +17,8 @@ router.get("/", (req, res) => {
         imageAlt, 
         imageSrc, 
         imageCaption,
+        imageTag, 
+        imageTitle, 
         userID, 
         displayName
     }); 
