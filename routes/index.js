@@ -10,8 +10,10 @@ router.get('/', (req, res) =>{
     gifs 
         .then((response) => { 
             response.forEach((doc) => {
-                gifArray.push(doc.data()); 
-            })
+                const docData = doc.data(); 
+                docData.id = doc.id; 
+                gifArray.push(docData); 
+            }); 
             return res.send(gifArray); 
         })
         .catch(function (error) {
